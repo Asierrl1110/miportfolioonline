@@ -10,4 +10,5 @@ Tecnologías utilizadas:
 Como ver el portfolio:
   - Clonar el repositorio de Git mediante "git clone https://github.com/Asierrl1110/MiPortfolio.git"
   - Abrir el fichero "index.html" en el navegador
-Posteriormente se podrá visualizar como página web el portfolio, de momento para visualizarlo hay que clonar el repositorio.
+  - También se puede acceder desde: https://asierrodriguezlamas.vercel.app/
+
