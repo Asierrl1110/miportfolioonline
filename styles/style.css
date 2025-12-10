@@ -1,0 +1,659 @@
+body {
+    background-color: #1E1E1E; /* color oscuro de fondo */
+    color: #ffffff; /* texto en blanco para contraste */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* --- Estilos Generales del Header --- */
+.navbar {
+    width: 100%;
+    position: relative;
+    top: 0;
+    background: rgba(20, 20, 20, 0.9);
+    padding: 15px 40px;
+    z-index: 1000;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+}
+
+/* --- Navegación Desktop --- */
+.nav-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: nowrap;  /* Mantiene todo en una fila en pantallas grandes */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: #ffffff;
+    font-weight: 500;
+    position: relative;
+    transition: color .3s ease;
+}
+
+/* Subrayado animado */
+.nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #00e5ff;
+    transition: width .3s ease;
+}
+
+.nav-link:hover {
+    color: #00e5ff;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* --- Responsive: 2 filas en pantallas pequeñas --- */
+@media (max-width: 768px) {
+    .nav-list {
+        flex-wrap: wrap;        /* Permite que bajen a segunda fila */
+        gap: 20px;              /* Menor separación */
+        justify-content: center;
+    }
+    
+    .nav-item {
+        flex: 1 1 30%;          /* 3 por fila aprox. */
+        text-align: center;
+    }
+}
+
+/* Extra pequeño (móvil vertical) */
+@media (max-width: 480px) {
+    .nav-item {
+        flex: 1 1 45%;         /* 2 por fila en móvil pequeño */
+    }
+}
+
+/* --- Start / Sección de Inicio --- */
+/* Imagen de perfil encima del título */
+.start-photo {
+    margin-bottom: 20px;
+}
+
+.start-photo img {
+    width: 150px;            /* Tamaño de la foto */
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;      /* Circular */
+    border: 3px solid #00e5ff; /* Borde acento */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    transition: transform .3s ease;
+}
+
+.start-photo img:hover {
+    transform: scale(1.05);   /* Efecto hover sutil */
+}
+
+/* Ajuste responsive */
+@media (max-width: 480px) {
+    .start-photo img {
+        width: 110px;
+        height: 110px;
+    }
+
+    .start-title {
+        font-size: 1.8rem;
+    }
+
+    .start-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .start-buttons .btn {
+        width: 140px;
+        padding: 10px 20px;
+    }
+}
+
+.start {
+    height: 100vh;                     /* Pantalla completa */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    background: linear-gradient(135deg, #0c0c0c, #1a1a1a);
+    color: #fff;
+}
+
+/* Título principal */
+.start-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.start-title span {
+    color: #00e5ff;                    /* Color acento para tu nombre */
+}
+
+/* Subtítulo */
+.start-subtitle {
+    font-size: 1.6rem;
+    font-weight: 400;
+    opacity: .85;
+    margin-bottom: 30px;
+}
+
+/* Botones */
+.start-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    padding: 12px 30px;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+    font-weight: 600;
+    transition: transform .2s, background .3s;
+}
+
+/* Estilos diferenciados por plataforma */
+.btn-linkedin {
+    background: #0077b5;
+    color: #fff;
+}
+
+.btn-github {
+    background: #24292e;
+    color: #fff;
+}
+
+/* Hover animación */
+.btn:hover {
+    transform: scale(1.05);
+    filter: brightness(1.15);
+}
+
+.btn-cv {
+    background-color: #4A6CF7;       /* color principal */
+    color: #fff;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Click */
+.btn-cv:active {
+    transform: scale(.97);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .start-title {
+        font-size: 2.2rem;
+    }
+    .start-subtitle {
+        font-size: 1.3rem;
+    }
+    .start-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .btn {
+        width: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .start-title {
+        font-size: 1.8rem;
+    }
+    .start-subtitle {
+        font-size: 1.1rem;
+    }
+}
+
+/* --- Sobre Mi / aboutme Me --- */
+.aboutme {
+    padding: 80px 20px;
+    background: #111;                /* Color de fondo suave */
+    color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutme-container {
+    max-width: 900px;
+    text-align: center;
+}
+
+/* Título */
+.aboutme-title {
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    color: #00e5ff;                  /* Acento visual consistente con start */
+    font-weight: 700;
+}
+
+/* Párrafos */
+.aboutme-text {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    opacity: .9;
+}
+
+/* Efecto sutil en hover para lectura interactiva */
+.aboutme-text:hover {
+    opacity: 1;
+    transform: scale(1.01);
+    transition: .3s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .aboutme-title {
+        font-size: 1.8rem;
+    }
+    .aboutme-text {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .aboutme-container {
+        max-width: 95%;
+    }
+}
+
+
+/* --- Educación / Education Section --- */
+.education {
+    padding: 80px 20px;
+    background: #0f0f0f;
+    color: #e6e6e6;
+    text-align: center;
+}
+
+.education-header {
+    font-size: 2.2rem;
+    color: #00e5ff;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+/* Grid adaptable para tarjetas */
+.education-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.education-card {
+    background: #1a1a1a;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.35);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+/* Hover con elevación */
+.education-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0px 8px 18px rgba(0,0,0,0.45);
+}
+
+/* Estilos de contenido */
+.education-title {
+    font-size: 1.4rem;
+    color: #00e5ff;
+    margin-bottom: 8px;
+}
+
+.education-school {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.education-duration {
+    font-size: 0.95rem;
+    opacity: 0.7;
+    margin-top: 5px;
+}
+
+/* Responsive refinado */
+@media (max-width: 480px) {
+    .education-title {
+        font-size: 1.2rem;
+    }
+    .education-school,
+    .education-duration {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* --- Experiencia / Experience Section --- */
+.experience {
+    padding: 80px 20px;
+    background: #111;
+    color: #e6e6e6;
+    text-align: center;
+}
+
+.experience-section {
+    padding: 80px 20px;
+    background: #111;
+    color: #e6e6e6;
+    text-align: center;
+}
+
+.experience-title {
+    font-size: 2.2rem;
+    color: #00e5ff;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+/* Grid flexible */
+.experience-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.experience-card {
+    background: #1a1a1a;
+    border-radius: 10px;
+    padding: 25px 30px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.35);
+    text-align: left;
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.experience-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0px 10px 24px rgba(0,0,0,0.45);
+}
+
+/* Títulos y textos */
+.job-title {
+    font-size: 1.4rem;
+    color: #00e5ff;
+    margin-bottom: 5px;
+}
+
+.company {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    color: #e6e6e6;
+}
+
+.duration {
+    font-size: 0.95rem;
+    opacity: 0.7;
+    margin-bottom: 15px;
+    color: #e6e6e6;
+}
+
+/* Lista de funciones */
+.functions {
+    padding-left: 20px;
+}
+
+.function-item {
+    margin-bottom: 6px;
+    line-height: 1.5;
+    opacity: 0.9;
+    color:#e6e6e6;
+}
+
+.function-item::marker {
+    color: #00e5ff;
+}
+
+/* Responsive refinado */
+@media (max-width: 480px) {
+    .job-title { font-size: 1.2rem; }
+    .company, .duration { font-size: 0.9rem; }
+    .function-item { font-size: .95rem; }
+}
+
+
+/* --- Proyectos / Projects --- */
+.projects {
+    padding: 80px 20px;
+    background: #0f0f0f;
+    color: #e8e8e8;
+    text-align: center;
+}
+
+.projects-title {
+    font-size: 2.2rem;
+    color: #00e5ff;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+/* Grid flexible */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.project-card {
+    background: #1a1a1a;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.35);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+/* Hover con elevación */
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0px 8px 18px rgba(0,0,0,0.45);
+}
+
+/* Imagen del proyecto */
+.project-image {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    background: #333;
+}
+
+/* Nombre del proyecto */
+.project-name {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #00e5ff;
+}
+
+/* Texto descriptivo */
+.project-text {
+    font-size: 0.95rem;
+    opacity: 0.9;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+/* Tecnologías como chips */
+.project-tecnologies {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+.project-tecnologies li {
+    background: #00e5ff22;
+    color: #00e5ff;
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* Botón */
+.project-button {
+    background: #00e5ff;
+    color: #000;
+    padding: 10px 25px;
+    border-radius: 6px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: background .3s, transform .2s;
+}
+
+.project-button:hover {
+    transform: scale(1.05);
+    background: #00b8d3;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .project-name { font-size: 1.15rem; }
+    .project-tecnologies li { font-size: 0.8rem; padding: 5px 10px; }
+}
+
+
+/* --- Skills / Tecnologías --- */
+.skills {
+    padding: 80px 20px;
+    background: #111;
+    color: #e8e8e8;
+    text-align: center;
+}
+
+.skills-title {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    font-weight: 700;
+    color: #00e5ff;
+}
+
+/* Grid de skills */
+.skills-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 25px;
+    max-width: 900px;
+    margin: auto;
+    padding: 0;
+}
+
+.skill-element {
+    background: #1a1a1a;
+    border-radius: 10px;
+    padding: 20px 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.35);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.skill-element:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.45);
+}
+
+/* Contenido interno */
+.skill-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Imagen del logo */
+.skill-content img {
+    width: 50px;              
+    height: 50px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 4px #00e5ff55);
+}
+
+/* Nombre */
+.skill-content p {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #00e5ff;
+}
+
+/* Responsive fino */
+@media (max-width: 480px) {
+    .skills-title { font-size: 1.8rem; }
+    .skill-content img { width: 40px; height: 40px; }
+    .skill-content p { font-size: 0.9rem; }
+}
+
+
+/* --- Footer --- */
+.footer {
+    background: #0a0a0a;
+    color: #ccc;
+    text-align: center;
+    padding: 25px 20px;
+    font-size: 0.95rem;
+    border-top: 2px solid #00e5ff22;
+}
+
+.footer p {
+    margin: 0 0 10px 0;
+    line-height: 1.5;
+    opacity: 0.9;
+}
+
+/* Enlace volver arriba */
+.back-to-top {
+    text-decoration: none;
+    color: #00e5ff;
+    font-weight: 600;
+    transition: color .3s, transform .2s;
+}
+
+.back-to-top:hover {
+    color: #00b8d3;
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .footer {
+        font-size: 0.85rem;
+        padding: 20px 15px;
+    }
+}

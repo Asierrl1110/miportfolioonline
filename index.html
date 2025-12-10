@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" type="image/x-icon" href="./assets/icons/favicon.ico">
+    <title>Portfolio - Asier Rodríguez Lamas</title>
+</head>
+
+<body>
+
+    <!-- Cabecera -->
+    <header id="header" class="navbar">
+        <nav>
+            <ul class="nav-list">
+                <li class="nav-item"><a class="nav-link" href="#start">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#aboutme">Sobre mi</a></li>
+                <li class="nav-item"><a class="nav-link" href="#education">Educación</a></li>
+                <li class="nav-item"><a class="nav-link" href="#experience">Experiencia</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Proyectos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Inicio -->
+    <section id="start" class="start">
+        <div class="start-photo">
+            <img src="./assets/img/fotopersonal.jpg" alt="Foto de Asier">
+        </div>
+        <h2 class="start-title">Hola, soy Asier Rodríguez Lamas</h2>
+        <h3 class="start-subtitle">Desarrollador de Software junior</h3>
+        <h3 class="start-subtitle">Correo electrónico: asierlamas05@gmail.com</h3>
+        <div class="start-buttons">
+            <button class="btn btn-linkedin" id="btnLinkedIn">LinkedIn</button>
+            <button class="btn btn-github" id="btnGitHub">GitHub</button>
+            <button class="btn btn-cv" id="btnDescargarCV">Descargar CV</button>
+        </div>
+    </section>
+
+    <!-- Sobre Mi -->
+    <section id="aboutme" class="aboutme">
+        <div class="aboutme-container">
+            <h3 class="aboutme-title">Sobre mi</h3>
+            <p class="aboutme-text">
+                Soy desarrollador junior de aplicaciones multiplataforma
+            </p>
+            <p class="aboutme-text">
+                Día a día aprendiendo nuevas tecnologías con el objetivo de construir aplicaciones eficientes, seguras y
+                atractivas
+            </p>
+            <p class="aboutme-text">
+                Recien graduado en DAM y actualmente estudiando DAW, que espero terminarlo en 2027
+            </p>
+            <p class="aboutme-text">
+                Abierto a nuevas oportunidades con el objetivo de seguir creciendo en este sector
+            </p>
+        </div>
+    </section>
+
+    <!-- Educación -->
+    <section id="education" class="education">
+        <h3 class="education-header">Educación</h3>
+        <div class="education-container">
+            <div class="education-card">
+                <h4 class="education-title">CFGS Desarrollo de Aplicaciones Web</h4>
+                <p class="education-school">CIFP La Laboral</p>
+                <p class="education-duration">Sept. 2025 - Jun. 2027</p>
+            </div>
+            <div class="education-card">
+                <h4 class="education-title">CFGS Desarrollo de Aplicaciones Multiplataforma</h4>
+                <p class="education-school">IES Número 1</p>
+                <p class="education-duration">Sept. 2023 - Jun. 2025</p>
+            </div>
+            <div class="education-card">
+                <h4 class="education-title">Bachillerato</h4>
+                <p class="education-school">IES Montevil</p>
+                <p class="education-duration">Sept. 2021 - Jun. 2023</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiencia -->
+    <section id="experience" class="experience">
+        <h3 class="experience-title">Experiencia</h3>
+        <div class="experience-container">
+            <div class="experience-card">
+                <h4 class="job-title">Desarrollador ABAP</h4>
+                <p class="company">Capgemini</p>
+                <p class="duration">Abr. 2025 - Jun. 2025</p>
+                <ul class="functions">
+                    <li class="function-item">Desarrollo de reports en lenguaje ABAP</li>
+                    <li class="function-item">Uso de Open SQL para trabajo con bases de datos</li>
+                    <li class="function-item">Visualización de datos mediante ALVs</li>
+                    <li class="function-item">Creación de tablas y ayudas de búsqueda en entorno SAP</li>
+                    <li class="function-item">Participar en un bootcamp en el que recibi formación básica en ABAP, UI5 y SAP BTP</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section id="projects" class="projects">
+        <h3 class="projects-title">Proyectos</h3>
+        <div class="projects-container">
+            <div class="project-card">
+                <img class="project-image" src="./assets/img/brainboostclient.jpg" alt="Imagen proyecto">
+                <p class="project-name">Brainboost Client</p>
+                <p class="project-text">
+                    Brainboost es una aplicación de estudio de flashcards, su objetivo es ayudar a los distintos
+                    usuarios de
+                    la aplicación para la memorización y aprendizaje de una forma más rápida de conceptos clave.
+                </p>
+                <ul class="project-tecnologies">
+                    <li>Kotlin</li>
+                    <li>SQLite</li>
+                </ul>
+                <button class="project-button" id="btnBrainboostClient">Ver proyecto</button>
+            </div>
+            <div class="project-card">
+                <img class="project-image" src="./assets/img/brainboostserver.jpg" alt="Imagen proyecto">
+                <p class="project-name">Brainboost Server</p>
+                <p class="project-text">
+                    Brainboost es una aplicación de estudio de flashcards, su objetivo es ayudar a los distintos
+                    usuarios de
+                    la aplicación para la memorización y aprendizaje de una forma más rápida de conceptos clave.
+                </p>
+                <ul class="project-tecnologies">
+                    <li>Java</li>
+                    <li>SQL Server</li>
+                </ul>
+                <button class="project-button" id="btnBrainboostServer">Ver proyecto</button>
+            </div>
+            <div class="project-card">
+                <img class="project-image" src="./assets/img/cajaregistradora.jpg" alt="Imagen proyecto">
+                <p class="project-name">Caja Registradora</p>
+                <p class="project-text">Consiste en una simulación de una caja registradora de supermercado, permitiendo
+                    la
+                    gestión de usuarios y productos, la realización de ventas y la generación de tickets en formato TXT
+                    y
+                    CSV.</p>
+                <ul class="project-tecnologies">
+                    <li>Java</li>
+                    <li>JavaSwing</li>
+                    <li>JavaHelp</li>
+                </ul>
+                <button class="project-button" id="btnCajaRegistradora">Ver proyecto</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="skills">
+        <h3 class="skills-title">Tecnologías</h3>
+        <ul class="skills-list">
+            <li class="skill-element">
+                <div class="skill-content">
+                    <img src="./assets/img/java.svg" alt="Imagen tecnologia">
+                    <p>Java</p>
+                </div>
+            </li>
+            <li class="skill-element">
+                <div class="skill-content">
+                    <img src="./assets/img/csharp.png" alt="Imagen tecnologia">
+                    <p>C#</p>
+                </div>
+            </li>
+            <li class="skill-element">
+                <div class="skill-content">
+                    <img src="./assets/img/kotlin.png" alt="Imagen tecnologia">
+                    <p>Kotlin</p>
+                </div>
+            </li>
+            <li class="skill-element">
+                <div class="skill-content">
+                    <img src="./assets/img/html5.png" alt="Imagen tecnologia">
+                    <p>HTML</p>
+                </div>
+            </li>
+            <li class="skill-element">
+                <div class="skill-content">
+                    <img src="./assets/img/css.png" alt="Imagen tecnologia">
+                    <p>CSS</p>
+                </div>
+            </li>
+            <li class="skill-element">
+                <div class="skill-content">
+                    <img src="./assets/img/javascript.png" alt="Imagen tecnologia">
+                    <p>JavaScript</p>
+                </div>
+            </li>
+            <li class="skill-element">
+                <div class="skill-content">
+                    <img src="./assets/img/nodejs.png" alt="Imagen tecnologia">
+                    <p>Node.js</p>
+                </div>
+            </li>
+            <li class="skill-element">
+                <div class="skill-content">
+                    <img src="./assets/img/expressjs.svg" alt="Imagen tecnologia">
+                    <p>Express.js</p>
+                </div>
+            </li>
+            <li class="skill-element">
+                <div class="skill-content">
+                    <img src="./assets/img/react.png" alt="Imagen tecnologia">
+                    <p>React</p>
+                </div>
+            </li>
+            <li class="skill-element">
+                <div class="skill-content">
+                    <img src="./assets/img/python.png" alt="Imagen tecnologia">
+                    <p>Python</p>
+                </div>
+            </li>
+            <li class="skill-element">
+                <div class="skill-content">
+                    <img src="./assets/img/sqlserver.png" alt="Imagen tecnologia">
+                    <p>SQL Server</p>
+                </div>
+            </li>
+            <li class="skill-element">
+                <div class="skill-content">
+                    <img src="./assets/img/mongodb.png" alt="Imagen tecnologia">
+                    <p>MongoDB</p>
+                </div>
+            </li>
+            <li class="skill-element">
+                <div class="skill-content">
+                    <img src="./assets/img/git.png" alt="Imagen tecnologia">
+                    <p>Git</p>
+                </div>
+            </li>
+            <li class="skill-element">
+                <div class="skill-content">
+                    <img src="./assets/img/github.png" alt="Imagen tecnologia">
+                    <p>GitHub</p>
+                </div>
+            </li>
+            <li class="skill-element">
+                <div class="skill-content">
+                    <img src="./assets/img/postman.png" alt="Imagen tecnologia">
+                    <p>Postman</p>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Pie de página -->
+    <footer id="footer" class="footer">
+        <p>© 2025 Desarrollado por Asier Rodríguez Lamas. Hecho con HTML, CSS y JavaScript.</p>
+        <a href="#header" class="back-to-top">Volver arriba ></a>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
