@@ -8,7 +8,8 @@ Tecnologías utilizadas:
   - JavaScript
 
 Como ver el portfolio:
-  - Clonar el repositorio de Git mediante "git clone https://github.com/Asierrl1110/MiPortfolio.git"
+  - Clonar el repositorio de Git mediante "git clone https://github.com/Asierrl1110/miportfolioonline"
   - Abrir el fichero "index.html" en el navegador
   - También se puede acceder desde: https://asierrodriguezlamas.vercel.app/
+
 
