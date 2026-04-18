@@ -159,3 +159,10 @@ export const skills = [
         "name": "Postman"
     }
 ]
+
+export const aboutme = [
+    "Soy desarrollador junior de aplicaciones multiplataforma",
+    "Día a día aprendiendo nuevas tecnologías con el objetivo de construir aplicaciones eficientes, seguras y atractivas",
+    "Recien graduado en DAM y actualmente estudiando DAW, que espero terminarlo en 2027",
+    "Actualmente trabajando en Lutech"
+]
