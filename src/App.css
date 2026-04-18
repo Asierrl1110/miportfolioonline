@@ -376,7 +376,7 @@ body {
 /* Grid flexible */
 .experience-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: 1fr;
     gap: 25px;
     max-width: 1100px;
     margin: auto;
