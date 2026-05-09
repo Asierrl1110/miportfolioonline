@@ -1,6 +1,7 @@
 import brainboostClient from '../assets/img/brainboostclient.jpg'
 import brainboostServer from '../assets/img/brainboostserver.jpg'
 import cajaRegistradora from '../assets/img/cajaregistradora.jpg'
+import portfolioReactVite from '../assets/img/portfolio-react-vite.jpg'
 
 import java from '../assets/img/java.svg'
 import csharp from '../assets/img/csharp.png'
@@ -62,6 +63,17 @@ export const experience = [
 ];
 
 export const projects = [
+    {
+        "image": portfolioReactVite,
+        "name": "Portfolio - React + Vite",
+        "text": "Portfolio personal desarrollado con React + Vite para mostrar proyectos, experiencia, educación y habilidades de forma clara y moderna. Incluye secciones dinámicas, diseño responsive y un formulario de contacto integrado y funcional. El objetivo es presentar mi perfil como desarrollador de forma profesional y accesible.",
+        "tecnologies": [
+            "React",
+            "Vite",
+            "JavaScript"
+        ],
+        "url": "https://github.com/Asierrl1110/miportfolioonline"
+    },
     {
         "image": brainboostClient,
         "name": "Brainboost Client",
