@@ -40,12 +40,22 @@ function ContactForm() {
         <section id='contactform' className='contactform'>
             <h2>Formulario de contacto</h2>
             <form onSubmit={onSubmit} className='form-div'>
-                <input type="text" name="name" placeholder="Nombre" required className='form-name'
+                <div className='form-group'>
+                    <label>Nombre <span className='form-required'>*</span></label>
+                    <input type="text" name="name" placeholder="Tu Nombre" required className='form-name'
                     value={formData.name} onChange={onChange} />
-                <input type="email" name="email" placeholder="Email" required className='form-email'
-                    value={formData.email} onChange={onChange} />
-                <textarea name="message" placeholder="Mensaje" rows="5" required className='form-message'
-                    value={formData.message} onChange={onChange} />
+                </div>
+                <div className='form-group'>
+                    <label>Email <span className='form-required'>*</span></label>
+                    <input type="email" name="email" placeholder="Tu Email" required className='form-email'
+                                        value={formData.email} onChange={onChange} />
+                </div>
+                <div className='form-group'>
+                    <label>Mensaje <span className='form-required'>*</span></label>
+                    <textarea name="message" placeholder="Mensaje que me quieras enviar por correo" rows="5" 
+                    required className='form-message' value={formData.message} onChange={onChange} />
+                </div>
+                <span className='form-required'>* Campos obligatorios</span>
                 <button type='submit' className='form-sendbutton'>Enviar</button>
             </form>
         </section>
