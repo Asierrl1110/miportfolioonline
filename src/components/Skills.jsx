@@ -1,5 +1,6 @@
 import React from 'react'
 import { skills } from '../data/portfolio'
+import './Skills.css'
 
 function Skills() {
     return (
