@@ -1,5 +1,6 @@
 import React from 'react'
 import { education as educations } from '../data/portfolio'
+import './Education.css'
 
 function Education() {
     return (
