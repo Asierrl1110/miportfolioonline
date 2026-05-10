@@ -3,6 +3,7 @@ import brainboostClient from '../assets/img/brainboostclient.jpg'
 import brainboostServer from '../assets/img/brainboostserver.jpg'
 import cajaRegistradora from '../assets/img/cajaregistradora.jpg'
 import { projects } from '../data/portfolio'
+import './Projects.css'
 
 function Projects() {
 
