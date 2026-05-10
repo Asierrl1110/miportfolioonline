@@ -1,5 +1,6 @@
 import React from 'react'
 import { aboutme } from '../data/portfolio'
+import './AboutMe.css'
 
 function AboutMe() {
   return (
