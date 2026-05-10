@@ -1,0 +1,36 @@
+/* --- Footer --- */
+.footer {
+    background: #0a0a0a;
+    color: #ccc;
+    text-align: center;
+    padding: 25px 20px;
+    font-size: 0.95rem;
+    border-top: 2px solid #00e5ff22;
+}
+
+.footer p {
+    margin: 0 0 10px 0;
+    line-height: 1.5;
+    opacity: 0.9;
+}
+
+/* Enlace volver arriba */
+.back-to-top {
+    text-decoration: none;
+    color: #00e5ff;
+    font-weight: 600;
+    transition: color .3s, transform .2s;
+}
+
+.back-to-top:hover {
+    color: #00b8d3;
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .footer {
+        font-size: 0.85rem;
+        padding: 20px 15px;
+    }
+}
