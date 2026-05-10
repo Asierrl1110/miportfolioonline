@@ -1,5 +1,6 @@
 import React from 'react'
 import { experience as experiences } from '../data/portfolio'
+import './Experience.css'
 
 function Experience() {
     return (
