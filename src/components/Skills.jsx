@@ -9,7 +9,7 @@ function Skills() {
             <ul className="skills-list">
                 {skills.map((skill) => {
                     return (
-                        <li className="skill-element">
+                        <li key={skill.name} className="skill-element">
                             <div className="skill-content">
                                 <img src={skill.image} alt="Imagen tecnologia" />
                                 <p>{skill.name}</p>
