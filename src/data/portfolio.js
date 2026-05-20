@@ -30,6 +30,11 @@ export const education = [
         "duration": "Sept. 2025 - Actualidad"
     },
     {
+        "title": "Formación NIO en Ciberseguridad",
+        "school": "Escola Universitaria Politecnica de Mataro (Tecnocampus)",
+        "duration": "Sept. 2025 - Dic. 2025"
+    },
+    {
         "title": "CFGS Desarrollo de Aplicaciones Multiplataforma",
         "school": "IES Número 1",
         "duration": "Sept. 2023 - Jun. 2025"
