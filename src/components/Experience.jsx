@@ -7,16 +7,16 @@ function Experience() {
         <section id="experience" className="experience">
             <h3 className="experience-title">Experiencia</h3>
             <div className="experience-container">
-                {experiences.map((experience) => {
+                {experiences.map((experience, index) => {
                     return (
-                        <div className="experience-card">
+                        <div key={index} className="experience-card">
                             <h4 className="job-title">{experience.title}</h4>
                             <p className="company">{experience.company}</p>
                             <p className="duration">{experience.duration}</p>
                             <ul className="functions">
-                                {experience['function-items'].map((item) => {
+                                {experience['function-items'].map((item, index) => {
                                 return (
-                                    <li className="function-item">{item}</li>
+                                    <li key={index} className="function-item">{item}</li>
                                 )
                             })}
                             </ul>
