@@ -7,9 +7,9 @@ function AboutMe() {
     <section id="aboutme" className="aboutme">
         <div className="aboutme-container">
             <h3 className="aboutme-title">Sobre mi</h3>
-            {aboutme.map((item) => {
+            {aboutme.map((item, index) => {
                 return (
-                    <p className="aboutme-text">{item}</p>
+                    <p key={index} className="aboutme-text">{item}</p>
                 )
             })}
         </div>
