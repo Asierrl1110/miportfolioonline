@@ -11,6 +11,7 @@ function Header() {
                 <li className="nav-item"><a className="nav-link" href="#education">Educación</a></li>
                 <li className="nav-item"><a className="nav-link" href="#experience">Experiencia</a></li>
                 <li className="nav-item"><a className="nav-link" href="#projects">Proyectos</a></li>
+                <li className="nav-item"><a className="nav-link" href="#certifications">Certificaciones</a></li>
                 <li className="nav-item"><a className="nav-link" href="#skills">Skills</a></li>
                 <li className="nav-item"><a className="nav-link" href="#contactform">Contacto</a></li>
             </ul>

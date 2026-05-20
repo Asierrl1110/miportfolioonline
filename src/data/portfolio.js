@@ -19,6 +19,10 @@ import git from '../assets/img/git.png'
 import github from '../assets/img/github.png'
 import postman from '../assets/img/postman.png'
 
+import openwebinarslogo from '../assets/img/openwebinars_logo.jpg'
+import saplogo from '../assets/img/sap_logo.jpg'
+import dgtlogo from '../assets/img/dgt_logo.jpg'
+
 export const education = [
     {
         "title": "CFGS Desarrollo de Aplicaciones Web",
@@ -106,6 +110,153 @@ export const projects = [
             "JavaHelp"
         ],
         "url": "https://github.com/Asierrl1110/CajaRegistradoraDESIN"
+    }
+]
+
+export const certifications = [
+    {
+        "name": "Introducción a la Inteligencia Artificial en Entornos Microsoft Copilot",
+        "organization": "OpenWebinars",
+        "expedition_date": "May. 2026",
+        "expiration_date": null,
+        "logo": openwebinarslogo,
+        "url": null
+    },
+    {
+        "name": "Getting Started with Creating an SAP Fiori Elements App Based on an OData V4 RAP Service - Course Completion",
+        "organization": "SAP",
+        "expedition_date": "Abr. 2026",
+        "expiration_date": null,
+        "logo": saplogo,
+        "url": "https://badger.learning.sap.com/verify/xopof-vytis-ludar-binyp-kesed"
+    },
+    {
+        "name": "Developing an SAP Fiori Elements App Based on a CAP OData V4 Service - Course Completion",
+        "organization": "SAP",
+        "expedition_date": "Abr. 2026",
+        "expiration_date": null,
+        "logo": saplogo,
+        "url": "https://badger.learning.sap.com/verify/xehur-bupab-navur-kefav-milol"
+    },
+    {
+        "name": "Learning Basic ABAP Programming",
+        "organization": "SAP",
+        "expedition_date": "Mar. 2026",
+        "expiration_date": null,
+        "logo": saplogo,
+        "url": "https://badger.learning.sap.com/verify/xohum-vypog-basig-cydop-hohaf"
+    },
+    {
+        "name": "Developing UIs with SAPUI5 - Course Completion",
+        "organization": "SAP",
+        "expedition_date": "Abr. 2026",
+        "expiration_date": null,
+        "logo": saplogo,
+        "url": "https://badger.learning.sap.com/verify/xovyf-napen-recur-sykoc-lapyg"
+    },
+    {
+        "name": "Fundamentos de Spring Boot",
+        "organization": "OpenWebinars",
+        "expedition_date": "Jul. 2025",
+        "expiration_date": null,
+        "logo": openwebinarslogo,
+        "url": "https://openwebinars.net/cert/m7Ts"
+    },
+    {
+        "name": "Crea tu primera API Rest con Spring Boot",
+        "organization": "OpenWebinars",
+        "expedition_date": "Jul. 2025",
+        "expiration_date": null,
+        "logo": openwebinarslogo,
+        "url": "https://openwebinars.net/cert/Pb9G"
+    },
+    {
+        "name": "Introducción a Spring Framework",
+        "organization": "OpenWebinars",
+        "expedition_date": "Jul. 2025",
+        "expiration_date": null,
+        "logo": openwebinarslogo,
+        "url": "https://openwebinars.net/cert/mqS8"
+    },
+    {
+        "name": "Python desde cero",
+        "organization": "OpenWebinars",
+        "expedition_date": "Jul. 2025",
+        "expiration_date": null,
+        "logo": openwebinarslogo,
+        "url": "https://openwebinars.net/cert/UonD"
+    },
+    {
+        "name": "React: Ampliando conceptos",
+        "organization": "OpenWebinars",
+        "expedition_date": "Jul. 2025",
+        "expiration_date": null,
+        "logo": openwebinarslogo,
+        "url": "https://openwebinars.net/cert/QtxR"
+    },
+    {
+        "name": "Fundamentos de React",
+        "organization": "OpenWebinars",
+        "expedition_date": "Jun. 2025",
+        "expiration_date": null,
+        "logo": openwebinarslogo,
+        "url": "https://openwebinars.net/cert/pnZB"
+    },
+    {
+        "name": "Curso Crea un API Rest con Node JS y Express: JWT y ficheros",
+        "organization": "OpenWebinars",
+        "logo": openwebinarslogo,
+        "expedition_date": "Jun. 2025",
+        "expiration_date": null,
+        "url": "https://openwebinars.net/cert/8GUu"
+    },
+    {
+        "name": "Curso Crea un API Rest con Node JS y Express: Endpoint con Rest",
+        "organization": "OpenWebinars",
+        "logo": openwebinarslogo,
+        "expedition_date": "Jun. 2025",
+        "expiration_date": null,
+        "url": "https://openwebinars.net/cert/AAmS"
+    },
+    {
+        "name": "Permiso B",
+        "organization": "Dirección general de tráfico",
+        "logo": dgtlogo,
+        "expedition_date": "Sept. 2024",
+        "expiration_date": "Sept. 2034",
+        "url": null
+    },
+    {
+        "name": "Curso de MongoDB: Creación y gestión de bases de datos NoSQL",
+        "organization": "OpenWebinars",
+        "logo": openwebinarslogo,
+        "expedition_date": "Feb. 2025",
+        "expiration_date": null,
+        "url": "https://openwebinars.net/cert/93je"
+    },
+    {
+        "name": "Curso de TypeScript",
+        "organization": "OpenWebinars",
+        "logo": openwebinarslogo,
+        "expedition_date": "Dic. 2024",
+        "expiration_date": null,
+        "url": "https://openwebinars.net/cert/7rGN"
+    },
+    {
+        "name": "Fundamentos de JavaScript",
+        "organization": "OpenWebinars",
+        "logo": openwebinarslogo,
+        "expedition_date": "Nov. 2024",
+        "expiration_date": null,
+        "url": "https://openwebinars.net/cert/kFLt"
+    },
+    {
+        "name": "Learning the Basics of ABAP Programming on SAP BTP - Record of Achievement SAP",
+        "organization": "SAP",
+        "logo": saplogo,
+        "expedition_date": "Ene. 2025",
+        "expiration_date": null,
+        "url": "https://www.credly.com/badges/74c69d11-42a6-4e75-bc58-f2282d0d6eda/linked_in_profile"
     }
 ]
 
