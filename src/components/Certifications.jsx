@@ -9,7 +9,7 @@ function Certifications() {
             <div className='certifications-container'>
                 {certifications.map((certification) => {
                     return (
-                        <div className='certification-card'>
+                        <div key={certification.name} className='certification-card'>
                             <img src={certification.logo} alt={certification.name} className='certification-logo'/>
                             <h4 className='certification-name'>{certification.name}</h4>
                             <p className='certification-organization'>{certification.organization}</p>
