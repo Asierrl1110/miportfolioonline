@@ -1,24 +1,43 @@
-/* --- Estilos Generales del Header --- */
+/* --- Reset básico recomendado --- */
+* {
+    box-sizing: border-box;
+}
+
+/* --- Header --- */
 .navbar {
     width: 100%;
     position: relative;
     top: 0;
     background: rgba(20, 20, 20, 0.9);
-    padding: 15px 40px;
+    padding: 15px 20px; /* reducido para móviles */
     z-index: 1000;
     box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+
+    display: flex;
+    justify-content: center;
 }
 
-/* --- Navegación Desktop --- */
+/* Contenedor interno para limitar ancho */
+.navbar-container {
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* --- Navegación --- */
 .nav-list {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 40px;
-    flex-wrap: nowrap;  /* Mantiene todo en una fila en pantallas grandes */
+    gap: 30px;
     list-style: none;
     margin: 0;
     padding: 0;
+
+    flex-wrap: nowrap;
+}
+
+.nav-item {
+    white-space: nowrap;
 }
 
 .nav-link {
@@ -50,26 +69,29 @@
     width: 100%;
 }
 
-/* --- Responsive: 2 filas en pantallas pequeñas --- */
+/* --- Responsive --- */
 @media (max-width: 768px) {
-    .navbar {
-        padding: 15px 20px;
-    }
     .nav-list {
-        flex-wrap: wrap;        /* Permite que bajen a segunda fila */
-        gap: 20px;              /* Menor separación */
-        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
     }
-    
+
     .nav-item {
-        flex: 1 1 30%;          /* 3 por fila aprox. */
-        text-align: center;
+        flex: 0 0 auto;
+    }
+
+    .nav-link {
+        font-size: 1rem;
     }
 }
 
-/* Extra pequeño (móvil vertical) */
+/* Móvil pequeño */
 @media (max-width: 480px) {
-    .nav-item {
-        flex: 1 1 45%;         /* 2 por fila en móvil pequeño */
+    .nav-list {
+        gap: 10px;
+    }
+
+    .nav-link {
+        font-size: 0.95rem;
     }
 }
