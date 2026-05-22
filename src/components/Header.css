@@ -3,62 +3,80 @@
     box-sizing: border-box;
 }
 
-/* --- Header --- */
+/* --- HEADER --- */
 .navbar {
     width: 100%;
-    position: relative;
+    position: sticky;
     top: 0;
-    background: rgba(20, 20, 20, 0.9);
-    padding: 15px 20px; /* reducido para móviles */
     z-index: 1000;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
 
     display: flex;
     justify-content: center;
+
+    padding: 14px 20px;
+
+    background: rgba(20, 20, 20, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    box-shadow: 0 3px 10px rgba(0,0,0,0.25);
+
+    transition: all 0.3s ease;
 }
 
-/* Contenedor interno para limitar ancho */
+/* efecto hover global sutil al header */
+.navbar:hover {
+    background: rgba(20, 20, 20, 0.92);
+}
+
+/* --- CONTENEDOR --- */
 .navbar-container {
     width: 100%;
     max-width: 1200px;
 }
 
-/* --- Navegación --- */
+/* --- NAV LIST --- */
 .nav-list {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 28px;
+
     list-style: none;
     margin: 0;
     padding: 0;
 
-    flex-wrap: nowrap;
+    flex-wrap: wrap; /* evita desbordes en pantallas pequeñas */
 }
 
+/* --- ITEMS --- */
 .nav-item {
     white-space: nowrap;
 }
 
+/* --- LINKS --- */
 .nav-link {
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     color: #ffffff;
     font-weight: 500;
+
     position: relative;
-    transition: color .3s ease;
+    transition: color 0.3s ease;
 }
 
-/* Subrayado animado */
+/* --- SUBRAYADO ANIMADO --- */
 .nav-link::after {
     content: "";
     position: absolute;
-    bottom: -4px;
+    bottom: -5px;
     left: 0;
+
     width: 0;
     height: 2px;
     background: #00e5ff;
-    transition: width .3s ease;
+
+    transition: width 0.3s ease;
 }
 
 .nav-link:hover {
@@ -69,29 +87,23 @@
     width: 100%;
 }
 
-/* --- Responsive --- */
+/* --- RESPONSIVE --- */
 @media (max-width: 768px) {
     .nav-list {
-        flex-wrap: wrap;
         gap: 15px;
     }
 
-    .nav-item {
-        flex: 0 0 auto;
-    }
-
     .nav-link {
-        font-size: 1rem;
+        font-size: 0.95rem;
     }
 }
 
-/* Móvil pequeño */
 @media (max-width: 480px) {
     .nav-list {
         gap: 10px;
     }
 
     .nav-link {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
     }
 }
