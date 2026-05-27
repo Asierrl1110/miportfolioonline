@@ -49,12 +49,11 @@ export const education = [
 export const experience = [
     {
         "title": "Desarrollador ABAP Junior",
-        "company": "Lutech",
+        "company": "Lutech - Sapimsa",
         "duration": "Feb. 2026 - Actualidad",
         "function-items": [
             "Desarrollos ABAP con reports, clases, smartforms Y diccionario de datos en sistemas ECC",
-            "Mantenimiento en sistemas ECC",
-            "En continua formación en ABAP, UI5, CAP, RAP y SAP Fiori Elements"
+            "Mantenimiento desarrollos, formularios, adaptaciones estándar"
         ]
     },
     {
