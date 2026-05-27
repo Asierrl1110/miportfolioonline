@@ -22,6 +22,7 @@ import postman from '../assets/img/postman.png'
 import openwebinarslogo from '../assets/img/openwebinars_logo.jpg'
 import saplogo from '../assets/img/sap_logo.jpg'
 import dgtlogo from '../assets/img/dgt_logo.jpg'
+import caplogo from '../assets/img/logoCap.png'
 
 export const education = [
     {
@@ -221,6 +222,14 @@ export const certifications = [
         "expedition_date": "Jun. 2025",
         "expiration_date": null,
         "url": "https://openwebinars.net/cert/AAmS"
+    },
+    {
+        "name": "Bootcamp SAP ABAP, UI5 y BTP",
+        "organization": "Capgemini",
+        "logo": caplogo,
+        "expedition_date": "Jun. 2025",
+        "expiration_date": null,
+        "url": null
     },
     {
         "name": "Permiso B",
