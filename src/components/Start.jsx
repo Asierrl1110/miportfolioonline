@@ -5,7 +5,7 @@ import './Start.css'
 function Start() {
 
   var goTo = (url) => {
-    window.open(url);
+    window.open(url, "_blank");
   }
 
   return (
@@ -19,7 +19,7 @@ function Start() {
         <div className="start-buttons">
             <button className="btn-aboutme btn-linkedin" id="btnLinkedIn" onClick={() => {goTo("https://www.linkedin.com/in/asierrodr%C3%ADguezlamas/")}}>LinkedIn</button>
             <button className="btn-aboutme btn-github" id="btnGitHub" onClick={() => {goTo("https://github.com/Asierrl1110")}}>GitHub</button>
-            <button className="btn-aboutme btn-cv" id="btnDescargarCV" onClick={() => {goTo("/public/CV_Asier.pdf")}}>Descargar CV</button>
+            <button className="btn-aboutme btn-cv" id="btnDescargarCV" onClick={() => {goTo("/CV_Asier.pdf")}}>Descargar CV</button>
         </div>
     </section>
   )
