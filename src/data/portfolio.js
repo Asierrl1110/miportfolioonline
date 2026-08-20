@@ -23,6 +23,7 @@ import openwebinarslogo from '../assets/img/openwebinars_logo.jpg'
 import saplogo from '../assets/img/sap_logo.jpg'
 import dgtlogo from '../assets/img/dgt_logo.jpg'
 import caplogo from '../assets/img/logoCap.png'
+import uipathlogo from '../assets/img/uipathlogo.png'
 
 export const education = [
     {
@@ -119,6 +120,22 @@ export const projects = [
 ]
 
 export const certifications = [
+    {
+        "name": "RPA Developer Foundation - Spanish",
+        "organization": "UiPath",
+        "expedition_date": "Ago. 2026",
+        "expiration_date": null,
+        "logo": uipathlogo,
+        "url": null
+    },
+    {
+        "name": "Introducción a la Automatización de Procesos con UiPath: Despegando en RPA",
+        "organization": "OpenWebinars",
+        "expedition_date": "Ago. 2026",
+        "expiration_date": null,
+        "logo": openwebinarslogo,
+        "url": null
+    },
     {
         "name": "Introducción a la Inteligencia Artificial en Entornos Microsoft Copilot",
         "organization": "OpenWebinars",
