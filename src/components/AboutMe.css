@@ -1,53 +1,108 @@
-/* --- Sobre Mi / aboutme Me --- */
+/* --- Variables de Color (Temas Claro y Oscuro) --- */
+:root {
+    /* Tema Claro (Por defecto) */
+    --bg-main: linear-gradient(180deg, #ddf0f8 0%, #c8dce8 100%);
+    --bg-card: #ffffff;
+    --bg-text-box: #f4f8fb;
+    --bg-text-hover: #e2f0fb;
+    --border-color: #b3cbe0;
+    --border-hover: #007cc0;
+    --border-text-box: #d0deea;
+    
+    --text-primary: #00679e;
+    --text-body: #2b363b;
+    
+    --shadow-card: 0 4px 12px rgba(0, 103, 158, 0.08);
+}
+
+/* Modo Oscuro controlado por atributo data-theme */
+[data-theme="dark"] {
+    --bg-main: linear-gradient(180deg, #1c2733 0%, #121a24 100%);
+    --bg-card: #23303e;
+    --bg-text-box: #17212b;
+    --bg-text-hover: #1e2c3a;
+    --border-color: #384d63;
+    --border-hover: #0096e6;
+    --border-text-box: #2c3e50;
+    
+    --text-primary: #4db3ff;
+    --text-body: #d5e1eb;
+    
+    --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* --- Sobre Mi / About Me --- */
 .aboutme {
-    padding: 80px 20px;
-    background: #111;                /* Color de fondo suave */
-    color: #ddd;
+    padding: 40px 20px;
+    background: var(--bg-main);
+    color: var(--text-body);
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: "Segoe UI", "Open Sans", Arial, sans-serif;
 }
 
 .aboutme-container {
     max-width: 900px;
-    text-align: center;
+    width: 100%;
+    text-align: left;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 25px 30px;
+    box-shadow: var(--shadow-card);
 }
 
 /* Título */
 .aboutme-title {
-    font-size: 2.2rem;
-    margin-bottom: 25px;
-    color: #00e5ff;                  /* Acento visual consistente con start */
-    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: var(--text-primary);
+    font-weight: 600;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border-hover);
 }
 
 /* Párrafos */
 .aboutme-text {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    margin-bottom: 15px;
-    opacity: .9;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 12px;
+    color: var(--text-body);
+    background: var(--bg-text-box);
+    padding: 12px 15px;
+    border: 1px solid var(--border-text-box);
+    border-radius: 3px;
+    transition: background 0.15s ease, border-color 0.15s ease;
 }
 
-/* Efecto sutil en hover para lectura interactiva */
+/* Hover sutil de selección de registro */
 .aboutme-text:hover {
-    opacity: 1;
-    transform: scale(1.01);
-    transition: .3s ease;
+    background: var(--bg-text-hover);
+    border-color: var(--border-hover);
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-    .aboutme-title {
-        font-size: 1.8rem;
+    .aboutme {
+        padding: 20px 10px;
     }
+    
+    .aboutme-container {
+        padding: 15px 20px;
+    }
+
+    .aboutme-title {
+        font-size: 1.15rem;
+    }
+
     .aboutme-text {
-        font-size: 1rem;
+        font-size: 0.85rem;
     }
 }
 
 @media (max-width: 480px) {
     .aboutme-container {
-        max-width: 95%;
+        max-width: 100%;
     }
 }
