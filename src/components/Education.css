@@ -1,66 +1,126 @@
+/* --- Variables de Color (Temas Claro y Oscuro) --- */
+:root {
+    /* Tema Claro (Por defecto) */
+    --bg-main: linear-gradient(180deg, #ddf0f8 0%, #c8dce8 100%);
+    --bg-card: #ffffff;
+    --bg-inner: #f4f8fb;
+    --bg-tag: #eef3f8;
+    --border-color: #b3cbe0;
+    --border-hover: #007cc0;
+    --border-tag: #c8dce8;
+    
+    --text-primary: #00679e;
+    --text-body: #2b363b;
+    --text-muted: #555555;
+    
+    --shadow-card: 0 4px 12px rgba(0, 103, 158, 0.08);
+    --shadow-hover: 0 6px 16px rgba(0, 103, 158, 0.15);
+}
+
+/* Modo Oscuro controlado por atributo data-theme */
+[data-theme="dark"] {
+    --bg-main: linear-gradient(180deg, #1c2733 0%, #121a24 100%);
+    --bg-card: #23303e;
+    --bg-inner: #17212b;
+    --bg-tag: #1e2c3a;
+    --border-color: #384d63;
+    --border-hover: #0096e6;
+    --border-tag: #2c3f52;
+    
+    --text-primary: #4db3ff;
+    --text-body: #d5e1eb;
+    --text-muted: #91a8bd;
+    
+    --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.4);
+    --shadow-hover: 0 6px 16px rgba(0, 150, 230, 0.25);
+}
+
 /* --- Educación / Education Section --- */
 .education {
-    padding: 80px 20px;
-    background: #0f0f0f;
-    color: #e6e6e6;
+    padding: 50px 20px;
+    background: var(--bg-main);
+    color: var(--text-body);
     text-align: center;
+    font-family: "Segoe UI", "Open Sans", Arial, sans-serif;
 }
 
 .education-header {
-    font-size: 2.2rem;
-    color: #00e5ff;
-    margin-bottom: 40px;
-    font-weight: 700;
+    font-size: 1.4rem;
+    color: var(--text-primary);
+    margin-bottom: 30px;
+    font-weight: 600;
+    display: inline-block;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--border-hover);
 }
 
-/* Grid adaptable para tarjetas */
+/* Grid adaptable para tarjetas estilo registro */
 .education-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 25px;
+    gap: 15px;
     max-width: 1100px;
     margin: auto;
 }
 
 .education-card {
-    background: #1a1a1a;
-    border-radius: 10px;
-    padding: 25px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.35);
-    transition: transform .3s ease, box-shadow .3s ease;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: var(--shadow-card);
+    transition: background 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
-/* Hover con elevación */
+/* Hover estilo selección de registro activo */
 .education-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0px 8px 18px rgba(0,0,0,0.45);
+    background: var(--bg-inner);
+    border-color: var(--border-hover);
+    box-shadow: var(--shadow-hover);
 }
 
 /* Estilos de contenido */
 .education-title {
-    font-size: 1.4rem;
-    color: #00e5ff;
-    margin-bottom: 8px;
+    font-size: 1.05rem;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+    font-weight: 600;
 }
 
 .education-school {
-    font-size: 1.1rem;
-    opacity: 0.9;
+    font-size: 0.9rem;
+    color: var(--text-body);
+    font-weight: 600;
 }
 
 .education-duration {
-    font-size: 0.95rem;
-    opacity: 0.7;
-    margin-top: 5px;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 8px;
+    display: inline-block;
+    padding: 2px 8px;
+    background: var(--bg-tag);
+    border: 1px solid var(--border-tag);
+    border-radius: 3px;
 }
 
-/* Responsive refinado */
+/* Responsive */
 @media (max-width: 480px) {
-    .education-title {
+    .education {
+        padding: 30px 10px;
+    }
+
+    .education-header {
         font-size: 1.2rem;
     }
+
+    .education-title {
+        font-size: 0.95rem;
+    }
+
     .education-school,
     .education-duration {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 }
