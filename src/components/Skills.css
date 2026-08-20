@@ -1,40 +1,80 @@
+/* --- Variables de Color (Temas Claro y Oscuro) --- */
+:root {
+    /* Tema Claro (Por defecto) */
+    --bg-main: linear-gradient(180deg, #ddf0f8 0%, #c8dce8 100%);
+    --bg-card: #ffffff;
+    --bg-inner: #f4f8fb;
+    --border-color: #b3cbe0;
+    --border-inner: #d0deea;
+    --border-hover: #007cc0;
+    
+    --text-primary: #00679e;
+    --text-body: #2b363b;
+    
+    --shadow-card: 0 4px 12px rgba(0, 103, 158, 0.08);
+    --shadow-hover: 0 6px 16px rgba(0, 103, 158, 0.15);
+}
+
+/* Modo Oscuro controlado por atributo data-theme */
+[data-theme="dark"] {
+    --bg-main: linear-gradient(180deg, #1c2733 0%, #121a24 100%);
+    --bg-card: #23303e;
+    --bg-inner: #17212b;
+    --border-color: #384d63;
+    --border-inner: #2c3e50;
+    --border-hover: #0096e6;
+    
+    --text-primary: #4db3ff;
+    --text-body: #d5e1eb;
+    
+    --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.4);
+    --shadow-hover: 0 6px 16px rgba(0, 150, 230, 0.25);
+}
+
 /* --- Skills / Tecnologías --- */
 .skills {
-    padding: 80px 20px;
-    background: #111;
-    color: #e8e8e8;
+    padding: 50px 20px;
+    background: var(--bg-main);
+    color: var(--text-body);
     text-align: center;
+    font-family: "Segoe UI", "Open Sans", Arial, sans-serif;
 }
 
 .skills-title {
-    font-size: 2.2rem;
-    margin-bottom: 40px;
-    font-weight: 700;
-    color: #00e5ff;
+    font-size: 1.4rem;
+    color: var(--text-primary);
+    margin-bottom: 30px;
+    font-weight: 600;
+    display: inline-block;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--border-hover);
 }
 
 /* Grid de skills */
 .skills-list {
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 12px;
     max-width: 900px;
     margin: auto;
     padding: 0;
 }
 
 .skill-element {
-    background: #1a1a1a;
-    border-radius: 10px;
-    padding: 20px 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.35);
-    transition: transform .3s ease, box-shadow .3s ease;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 15px 10px;
+    box-shadow: var(--shadow-card);
+    transition: background 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
+/* Hover estilo celda seleccionada */
 .skill-element:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 8px 18px rgba(0,0,0,0.45);
+    background: var(--bg-inner);
+    border-color: var(--border-hover);
+    box-shadow: var(--shadow-hover);
 }
 
 /* Contenido interno */
@@ -42,27 +82,44 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
 }
 
 /* Imagen del logo */
 .skill-content img {
-    width: 50px;              
-    height: 50px;
+    width: 42px;              
+    height: 42px;
     object-fit: contain;
-    filter: drop-shadow(0 0 4px #00e5ff55);
+    padding: 4px;
+    background: var(--bg-inner);
+    border: 1px solid var(--border-inner);
+    border-radius: 3px;
 }
 
 /* Nombre */
 .skill-content p {
-    font-size: 1rem;
+    font-size: 0.85rem;
     font-weight: 600;
-    color: #00e5ff;
+    color: var(--text-body);
+    margin: 0;
 }
 
-/* Responsive fino */
+/* Responsive */
 @media (max-width: 480px) {
-    .skills-title { font-size: 1.8rem; }
-    .skill-content img { width: 40px; height: 40px; }
-    .skill-content p { font-size: 0.9rem; }
+    .skills {
+        padding: 30px 10px;
+    }
+
+    .skills-title { 
+        font-size: 1.2rem; 
+    }
+
+    .skill-content img { 
+        width: 36px; 
+        height: 36px; 
+    }
+
+    .skill-content p { 
+        font-size: 0.8rem; 
+    }
 }
