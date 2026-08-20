@@ -1,140 +1,207 @@
-/* --- Certifications --- */
+/* --- Variables de Color (Temas Claro y Oscuro) --- */
+:root {
+    /* Tema Claro (Por defecto) */
+    --bg-main: linear-gradient(180deg, #ddf0f8 0%, #c8dce8 100%);
+    --bg-card: #ffffff;
+    --bg-inner: #f4f8fb;
+    --bg-tag: #eef3f8;
+    --border-color: #b3cbe0;
+    --border-hover: #007cc0;
+    --border-logo: #d0deea;
+    --border-tag: #c8dce8;
+    
+    --text-primary: #00679e;
+    --text-body: #2b363b;
+    --text-muted: #555555;
+    
+    --btn-bg: #ffffff;
+    --btn-text: #00679e;
+    --btn-border: #00679e;
+    --btn-hover-bg: #00679e;
+    --btn-hover-text: #ffffff;
+    --btn-active-bg: #00527e;
+    --btn-active-border: #003d5e;
+    
+    --shadow-card: 0 4px 12px rgba(0, 103, 158, 0.08);
+    --shadow-hover: 0 6px 16px rgba(0, 103, 158, 0.15);
+    --shadow-btn-hover: 0 2px 5px rgba(0, 103, 158, 0.25);
+}
 
+/* Modo Oscuro controlado por atributo data-theme */
+[data-theme="dark"] {
+    --bg-main: linear-gradient(180deg, #1c2733 0%, #121a24 100%);
+    --bg-card: #23303e;
+    --bg-inner: #17212b;
+    --bg-tag: #1e2c3a;
+    --border-color: #384d63;
+    --border-hover: #0096e6;
+    --border-logo: #2c3f52;
+    --border-tag: #2c3f52;
+    
+    --text-primary: #4db3ff;
+    --text-body: #d5e1eb;
+    --text-muted: #91a8bd;
+    
+    --btn-bg: #23303e;
+    --btn-text: #4db3ff;
+    --btn-border: #4db3ff;
+    --btn-hover-bg: #007cc0;
+    --btn-hover-text: #ffffff;
+    --btn-active-bg: #00527e;
+    --btn-active-border: #003d5e;
+    
+    --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.4);
+    --shadow-hover: 0 6px 16px rgba(0, 150, 230, 0.25);
+    --shadow-btn-hover: 0 2px 5px rgba(0, 150, 230, 0.25);
+}
+
+/* --- Certificaciones / Certifications --- */
 .certifications {
-    padding: 80px 20px;
-    background: #111;
-    color: #e8e8e8;
+    padding: 50px 20px;
+    background: var(--bg-main);
+    color: var(--text-body);
     text-align: center;
+    font-family: "Segoe UI", "Open Sans", Arial, sans-serif;
 }
 
 .certifications-header {
-    font-size: 2.2rem;
-    color: #00e5ff;
-    margin-bottom: 40px;
-    font-weight: 700;
+    font-size: 1.4rem;
+    color: var(--text-primary);
+    margin-bottom: 30px;
+    font-weight: 600;
+    display: inline-block;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--border-hover);
 }
 
 /* Grid responsive */
 .certifications-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-
+    gap: 15px;
     max-width: 1200px;
     margin: auto;
 }
 
-/* Tarjeta */
+/* Tarjeta estilo panel de datos */
 .certification-card {
-    background: #1a1a1a;
-    border-radius: 12px;
-    padding: 25px;
-
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.35);
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 20px;
+    box-shadow: var(--shadow-card);
 
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    transition:
-        transform .3s ease,
-        box-shadow .3s ease;
+    transition: background 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
 .certification-card:hover {
-    transform: translateY(-6px);
-
-    box-shadow:
-        0px 8px 18px rgba(0,0,0,0.45);
+    background: var(--bg-inner);
+    border-color: var(--border-hover);
+    box-shadow: var(--shadow-hover);
 }
 
 /* Logo */
 .certification-logo {
-    width: 70px;
-    height: 70px;
-
+    width: 60px;
+    height: 60px;
     object-fit: contain;
-
-    margin-bottom: 18px;
-
-    filter: drop-shadow(0 0 6px rgba(0,229,255,.25));
+    margin-bottom: 15px;
+    padding: 6px;
+    background: var(--bg-inner);
+    border: 1px solid var(--border-logo);
+    border-radius: 3px;
 }
 
 /* Nombre */
 .certification-name {
-    font-size: 1.25rem;
-    color: #00e5ff;
-    margin-bottom: 10px;
+    font-size: 1.05rem;
+    color: var(--text-primary);
+    margin-bottom: 6px;
     font-weight: 600;
 }
 
 /* Organización */
 .certification-organization {
-    font-size: 1rem;
-    opacity: .9;
+    font-size: 0.9rem;
+    color: var(--text-body);
+    font-weight: 600;
     margin-bottom: 8px;
 }
 
-/* Fechas */
+/* Fechas estilo badge/status */
 .certification-expedition-date,
 .certification-expiration-date {
-    font-size: .9rem;
-    color: #aaa;
-    margin: 4px 0;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin: 2px 0;
+    display: inline-block;
+    padding: 2px 8px;
+    background: var(--bg-tag);
+    border: 1px solid var(--border-tag);
+    border-radius: 3px;
 }
 
-/* Botón certificado */
+/* Botón certificado estilo Pushbutton */
 .certification-url {
-    margin-top: 18px;
+    margin-top: 15px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
 
-    background: #00e5ff;
-    color: #000;
+    background: var(--btn-bg);
+    color: var(--btn-text);
+    border: 1px solid var(--btn-border);
+    border-radius: 3px;
 
     text-decoration: none;
+    padding: 6px 16px;
 
-    padding: 10px 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
 
-    border-radius: 8px;
-
-    font-size: .9rem;
-    font-weight: 700;
-
-    transition:
-        background .3s ease,
-        transform .2s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    transition: all 0.15s ease-in-out;
 }
 
 .certification-url:hover {
-    background: #00b8d3;
-    transform: scale(1.05);
+    color: var(--btn-hover-text);
+    background: var(--btn-hover-bg);
+    border-color: var(--btn-hover-bg);
+    box-shadow: var(--shadow-btn-hover);
+}
+
+.certification-url:active {
+    background: var(--btn-active-bg);
+    border-color: var(--btn-active-border);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsive */
-@media (max-width:768px){
-
-    .certifications-header{
-        font-size:1.9rem;
+@media (max-width: 768px) {
+    .certifications-header {
+        font-size: 1.25rem;
     }
-
 }
 
-@media (max-width:480px){
-
-    .certifications{
-        padding:60px 15px;
+@media (max-width: 480px) {
+    .certifications {
+        padding: 30px 10px;
     }
 
-    .certifications-header{
-        font-size:1.7rem;
+    .certifications-header {
+        font-size: 1.15rem;
     }
 
-    .certification-name{
-        font-size:1.1rem;
+    .certification-name {
+        font-size: 0.95rem;
     }
 
-    .certification-logo{
-        width:55px;
-        height:55px;
+    .certification-logo {
+        width: 50px;
+        height: 50px;
     }
-
 }
