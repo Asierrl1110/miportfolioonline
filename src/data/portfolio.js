@@ -126,7 +126,7 @@ export const certifications = [
         "expedition_date": "Sept. 2026",
         "expiration_date": null,
         "logo": uipathlogo,
-        "url": "/public/Certificaciones/MaquinasDeEstadoEnStudio.pdf"
+        "url": "/public/certificaciones/MaquinasDeEstadoEnStudio.pdf"
     },
     {
         "name": "Trabajando con archivos y carpetas locales en Studio",
@@ -134,7 +134,7 @@ export const certifications = [
         "expedition_date": "Sept. 2026",
         "expiration_date": null,
         "logo": uipathlogo,
-        "url": "/public/Certificaciones/TrabajandoConArchivosYCarpetasLocalesEnStudio.pdf"
+        "url": "/public/certificaciones/TrabajandoConArchivosYCarpetasLocalesEnStudio.pdf"
     },
     {
         "name": "RPA Developer Foundation - Spanish",
@@ -142,7 +142,7 @@ export const certifications = [
         "expedition_date": "Ago. 2026",
         "expiration_date": null,
         "logo": uipathlogo,
-        "url": "/public/Certificaciones/RPADeveloperFoundationSpanish.pdf"
+        "url": "/public/certificaciones/RPADeveloperFoundationSpanish.pdf"
     },
     {
         "name": "Introducción a la Automatización de Procesos con UiPath: Despegando en RPA",
