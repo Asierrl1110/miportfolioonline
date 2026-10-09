@@ -121,12 +121,28 @@ export const projects = [
 
 export const certifications = [
     {
+        "name": "Máquinas de estado en Studio",
+        "organization": "UiPath",
+        "expedition_date": "Sept. 2026",
+        "expiration_date": null,
+        "logo": uipathlogo,
+        "url": "/public/Certificaciones/MaquinasDeEstadoEnStudio.pdf"
+    },
+    {
+        "name": "Trabajando con archivos y carpetas locales en Studio",
+        "organization": "UiPath",
+        "expedition_date": "Sept. 2026",
+        "expiration_date": null,
+        "logo": uipathlogo,
+        "url": "/public/Certificaciones/TrabajandoConArchivosYCarpetasLocalesEnStudio.pdf"
+    },
+    {
         "name": "RPA Developer Foundation - Spanish",
         "organization": "UiPath",
         "expedition_date": "Ago. 2026",
         "expiration_date": null,
         "logo": uipathlogo,
-        "url": null
+        "url": "/public/Certificaciones/RPADeveloperFoundationSpanish.pdf"
     },
     {
         "name": "Introducción a la Automatización de Procesos con UiPath: Despegando en RPA",
@@ -134,7 +150,7 @@ export const certifications = [
         "expedition_date": "Ago. 2026",
         "expiration_date": null,
         "logo": openwebinarslogo,
-        "url": null
+        "url": "https://openwebinars.net/cert/h1PG"
     },
     {
         "name": "Introducción a la Inteligencia Artificial en Entornos Microsoft Copilot",
@@ -142,7 +158,7 @@ export const certifications = [
         "expedition_date": "May. 2026",
         "expiration_date": null,
         "logo": openwebinarslogo,
-        "url": null
+        "url": "https://openwebinars.net/cert/roew"
     },
     {
         "name": "Getting Started with Creating an SAP Fiori Elements App Based on an OData V4 RAP Service - Course Completion",
